@@ -30,6 +30,11 @@ spec:
               revision: "{{ .Values.generator.revision }}"
               files:
               - path: "config/{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/instance-stub1.yaml"
+          - git:
+              repoURL: "{{ .Values.generator.repo_url }}"
+              revision: "{{ .Values.generator.revision }}"
+              files:
+              - path: "config/{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/instance-stub2.yaml"
   template:
     metadata:
       name: "instance.{{.Values.account.id}}.{{.Values.region.id}}.{{ .Values.cluster.id }}.{{ `{{.instance.id}}` }}"

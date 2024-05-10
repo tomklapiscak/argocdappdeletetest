@@ -1,12 +1,12 @@
-{{- if not (empty .Values.stub1) }}
+{{- if not (empty .Values.stub2) }}
 ---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stub1.{{.Values.account.id}}.{{.Values.region.id}}.{{ .Values.cluster.id }}.{{ .Values.instance.id }}
+  name: stub2.{{.Values.account.id}}.{{.Values.region.id}}.{{ .Values.cluster.id }}.{{ .Values.instance.id }}
   namespace: {{ .Values.argo.namespace }}
   annotations:
-    argocd.argoproj.io/sync-wave: "000"
+    argocd.argoproj.io/sync-wave: "100"
     {{- if and .Values.notifications .Values.notifications.slack_channel_id }}
     notifications.argoproj.io/subscribe.on-sync-failed.workspace1: {{ .Values.notifications.slack_channel_id }}
     notifications.argoproj.io/subscribe.on-sync-succeeded.workspace1: {{ .Values.notifications.slack_channel_id }}
@@ -35,7 +35,7 @@ spec:
             account_id: "{{ .Values.account.id }}"
             region_id: "{{ .Values.region.id }}"
             cluster_id: "{{ .Values.cluster.id }}"
-            stub_id: "{{ .Values.instance.id }}-1"
+            stub_id: "{{ .Values.instance.id }}-2"
         - name: ARGOCD_APP_NAME
           value: syncres
         {{- if not (empty .Values.avp.secret) }}
