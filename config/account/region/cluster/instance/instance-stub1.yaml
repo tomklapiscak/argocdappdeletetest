@@ -1,4 +1,0 @@
-merge-key: "account/region/cluster/instance"
-
-stub1:
-  hello: world
