@@ -96,7 +96,6 @@ spec:
         syncOptions:
           - CreateNamespace=false
           - RespectIgnoreDifferences=true
-          - PruneLast=true
       ignoreDifferences:
         - group: '*'
           kind: ServiceAccount
