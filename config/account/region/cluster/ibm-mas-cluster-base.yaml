@@ -1,0 +1,10 @@
+merge-key: "account/region/cluster"
+
+account:
+  id: account
+
+region:
+  id: region
+cluster:
+  id: cluster
+  url: https://kubernetes.default.svc
