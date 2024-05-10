@@ -8,6 +8,6 @@ metadata:
   name: "{{ .Values.stub_id }}-{{ .Values.account_id }}-{{ .Values.region_id }}-{{ .Values.cluster_id }}"
   namespace: {{ .Values.mas_app_namespace }}
   finalizers:
-    - does.not.exist
+    - kubernetes
 data:
   this-is-just-a-placeholder-resource: ""
