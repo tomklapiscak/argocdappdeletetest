@@ -24,12 +24,12 @@ spec:
               repoURL: "{{ .Values.generator.repo_url }}"
               revision: "{{ .Values.generator.revision }}"
               files:
-              - path: "{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/ibm-mas-instance-base.yaml"
+              - path: "config/{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/ibm-mas-instance-base.yaml"
           - git:
               repoURL: "{{ .Values.generator.repo_url }}"
               revision: "{{ .Values.generator.revision }}"
               files:
-              - path: "{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/instance-stub1.yaml"
+              - path: "config/{{ .Values.account.id }}/{{ .Values.region.id }}/{{ .Values.cluster.id }}/*/instance-stub1.yaml"
   template:
     metadata:
       name: "instance.{{.Values.account.id}}.{{.Values.region.id}}.{{ .Values.cluster.id }}.{{ `{{.instance.id}}` }}"
