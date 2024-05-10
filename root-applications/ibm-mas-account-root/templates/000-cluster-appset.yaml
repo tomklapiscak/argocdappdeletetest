@@ -25,6 +25,11 @@ spec:
               revision: "{{ .Values.generator.revision }}"
               files:
               - path: "{{ .Values.account.id }}/*/*/ibm-mas-cluster-base.yaml"
+          - git:
+              repoURL: "{{ .Values.generator.repo_url }}"
+              revision: "{{ .Values.generator.revision }}"
+              files:
+              - path: "{{ .Values.account.id }}/*/*/cluster-stub1.yaml"
   template:
     metadata:
       name: "cluster.{{ .Values.account.id }}.{{ `{{.region.id}}` }}.{{ `{{.cluster.id}}` }}"

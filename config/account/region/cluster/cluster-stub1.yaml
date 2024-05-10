@@ -1,0 +1,4 @@
+merge-key: "account/region/cluster"
+
+stub1:
+  hello: world
